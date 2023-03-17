@@ -1,11 +1,24 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja" dir="ltr">
   <head>
     <meta charset="utf-8">
   </head>
   <body>
-      <a href="https://sakkayuta.github.io/sample/next.html">次のページ</a>
-      <input type="text" id="aaa" />
-      <input type="submit" value="Submit" />
+      <a href="https://sakkayuta.github.io/sample/next.html">遷移先</a>
+      <form action="next.html" method="post">
+      整数<br>
+      <input = intval($_POST["num"]);  // 入力値を取得する
+      
+      if ($input % 15 == 0) {
+        echo "Fizz Buzz";
+      } elseif ($input % 3 == 0) {
+        echo "Fizz";
+      } elseif ($input % 5 == 0) {
+        echo "Buzz";
+      } else {
+        echo $input;
+      }
+ 
+      <input type="submit" value="確認">
   </body>
 </html>
